@@ -41,7 +41,10 @@ export default function HeroSection() {
             <Phone className="w-5 h-5" />
             AI Call Test
           </a>
-          <a href="#contact" className="px-8 py-3.5 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-all text-base text-center min-w-[180px]">
+          <a
+            href="#contact"
+            className="rounded-xl border-[1px] border-[rgba(30,64,175,0.8)] text-primary font-bold hover:bg-primary/5 transition-all text-base text-center min-w-[180px] px-[18px] py-3.5 scale-[0.97]"
+          >
             Book a Call
           </a>
         </motion.div>
