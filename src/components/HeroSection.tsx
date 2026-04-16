@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -36,10 +37,13 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a href="#contact" className="btn-metallic text-base px-8 py-3.5">Request Staff</a>
-          <a href="https://callpilot.pro/" target="_blank" rel="noopener noreferrer" className="btn-metallic text-base px-8 py-3.5">
+          <a href="https://callpilot.pro/" target="_blank" rel="noopener noreferrer" className="btn-metallic text-base px-8 py-3.5 flex items-center justify-center gap-2">
+            <Phone className="w-5 h-5" />
             AI Call Test
           </a>
-          <a href="#contact" className="btn-metallic text-base px-8 py-3.5">Book a Call</a>
+          <a href="#contact" className="px-8 py-3.5 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-all text-base text-center min-w-[180px]">
+            Book a Call
+          </a>
         </motion.div>
       </div>
     </section>
