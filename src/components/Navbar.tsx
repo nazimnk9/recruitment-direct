@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Linkedin, Facebook, Menu, X, Zap, Users, Briefcase, UserCheck, Search, ShieldCheck } from "lucide-react";
+import { ChevronDown, Linkedin, Facebook, Menu, X, Zap, Users, Briefcase, UserCheck, Search, ShieldCheck, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "@/assets/logo.png";
@@ -155,14 +155,12 @@ export default function Navbar() {
           </div>
 
           {/* Right Side - Desktop */}
-          <div className="hidden lg:flex flex-col items-end gap-1">
-            <div className="flex items-center gap-3">
-              <a href="#contact" className="btn-metallic text-sm px-5 py-2.5">AI Hire Now</a>
-              <a href="#contact" className="btn-metallic text-sm px-5 py-2.5">Book a Call</a>
-            </div>
-            <p className="text-xs text-foreground/60 font-medium mr-2">
-              Prefer to speak? Call us on <a href="tel:01324613298" className="hover:text-primary transition-colors">01324 613298</a>
-            </p>
+          <div className="hidden lg:flex items-center gap-6">
+            <a href="tel:01324613198" className="flex items-center gap-2 text-foreground font-medium hover:text-primary transition-colors">
+              <Phone className="w-5 h-5 text-primary" />
+              <span>01324 613198</span>
+            </a>
+            <a href="#contact" className="btn-metallic text-sm px-6 py-3">AI Hire Now</a>
           </div>
 
           {/* Mobile/Tablet Menu Button */}
@@ -252,10 +250,8 @@ export default function Navbar() {
               </div>
 
               {/* Mobile Actions - Ensuring nothing is skipped */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 px-4 pt-2">
-                <a href="#contact" onClick={() => setMobileOpen(false)} className="btn-metallic text-sm py-3 text-center">AI Hire Now</a>
-                <a href="#contact" onClick={() => setMobileOpen(false)} className="btn-metallic text-sm py-3 text-center">Book a Call</a>
-                {/* <a href="#contact" onClick={() => setMobileOpen(false)} className="btn-metallic text-sm py-3 text-center sm:col-span-2">AI Hire Now</a> */}
+              <div className="grid grid-cols-1 gap-3 px-4 pt-2">
+                <a href="#contact" onClick={() => setMobileOpen(false)} className="btn-metallic text-sm py-4 text-center">AI Hire Now</a>
               </div>
               <div className="px-4 pb-2 text-center text-xs text-foreground/60 font-medium">
                 Prefer to speak? Call us on <a href="tel:01324613298" className="hover:text-primary transition-colors">01324 613298</a>
