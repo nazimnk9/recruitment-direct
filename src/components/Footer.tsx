@@ -1,4 +1,5 @@
 import { Linkedin, Facebook } from "lucide-react";
+import Image from "next/image";
 import logo from "@/assets/logo.png";
 
 const policyLinks = [
@@ -12,7 +13,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div>
-            <img src={logo} alt="Recruitment Direct" className="h-14 w-auto mb-4 brightness-0 invert" />
+            <Image src={logo} alt="Recruitment Direct" className="h-24 w-auto mb-4 shadow-none" unoptimized />
             <p className="text-white/70 text-sm mb-4">
               Faster Hiring with AI. Verified by Recruitment Experts.
             </p>
