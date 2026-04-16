@@ -37,7 +37,7 @@ export default function HeroSection() {
         >
           <a href="#contact" className="btn-metallic text-base px-8 py-3.5">Request Staff</a>
           <a href="https://callpilot.pro/" target="_blank" rel="noopener noreferrer" className="btn-metallic text-base px-8 py-3.5">
-            Try a Free AI Call
+            AI Call Test
           </a>
           <a href="#contact" className="btn-metallic text-base px-8 py-3.5">Book a Call</a>
         </motion.div>
