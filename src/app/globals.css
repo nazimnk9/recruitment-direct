@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 90% 46%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 90% 46%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 30% 95%;
+    --muted-foreground: 222 47% 11%;
+
+    --accent: 217 90% 46%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 90% 46%;
+    --input: 217 30% 90%;
+    --ring: 217 90% 46%;
+
+    --radius: 0.5rem;
+
+    --navy: 216 80% 15%;
+    --navy-foreground: 0 0% 100%;
+    --electric-blue: 217 90% 46%;
+    --text-dark: 222 47% 11%;
+
+    --gradient-metallic: linear-gradient(135deg, hsl(217, 90%, 52%), hsl(217, 90%, 40%), hsl(217, 90%, 48%));
+    --gradient-metallic-hover: linear-gradient(135deg, hsl(217, 90%, 56%), hsl(217, 90%, 44%), hsl(217, 90%, 52%));
+    --gradient-metallic-active: linear-gradient(135deg, hsl(217, 90%, 36%), hsl(217, 90%, 30%), hsl(217, 90%, 38%));
+    --glow-blue: 0 0 20px hsla(217, 90%, 46%, 0.4);
+    --glow-blue-strong: 0 0 30px hsla(217, 90%, 46%, 0.6);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-metallic {
+    background: var(--gradient-metallic);
+    @apply text-primary-foreground font-semibold rounded-[10px] px-6 py-3 transition-all duration-200;
+    box-shadow: var(--glow-blue);
+  }
+  .btn-metallic:hover {
+    background: var(--gradient-metallic-hover);
+    box-shadow: var(--glow-blue-strong);
+    transform: translateY(-1px);
+  }
+  .btn-metallic:active {
+    background: var(--gradient-metallic-active);
+    box-shadow: none;
+    transform: translateY(1px) scale(0.98);
+  }
+
+  .card-hover {
+    @apply bg-background rounded-xl transition-all duration-300;
+    box-shadow: 0 2px 12px hsla(217, 90%, 46%, 0.08);
+  }
+  .card-hover:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground tracking-tight;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsla(217, 90%, 46%, 0.3);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px hsla(217, 90%, 46%, 0.2); }
+  50% { box-shadow: 0 0 25px hsla(217, 90%, 46%, 0.5); }
+}
+
+@keyframes line-draw {
+  from { width: 0; }
+  to { width: 100%; }
+}
