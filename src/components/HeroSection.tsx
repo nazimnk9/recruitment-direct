@@ -15,7 +15,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="section-title text-4xl md:text-5xl lg:text-6xl mb-6 text-black"
+          className="section-title text-3xl md:text-4xl lg:text-5xl mb-6 text-black"
         >
           <strong>UK Recruitment Agency</strong> Delivering Temporary, Contract & Permanent Staff – Faster with AI
         </motion.h1>
