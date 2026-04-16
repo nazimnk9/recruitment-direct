@@ -1,6 +1,6 @@
 import { Linkedin, Facebook } from "lucide-react";
 import Image from "next/image";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/na.png";
 
 const policyLinks = [
   "Privacy Policy", "Terms", "Cookies", "GDPR", "Modern Slavery", "Health & Safety"
